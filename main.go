@@ -1,12 +1,14 @@
 package main
 
 import (
+	"os"
 	"fmt"
 	"html/template"
 	"net/http"
 )
 
 func main() {
+	// port := os.Getenv("PORT")
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/stories", storiesHandler)
 	http.HandleFunc("/about", aboutHandler)
